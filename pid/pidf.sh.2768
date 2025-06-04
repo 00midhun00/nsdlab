@@ -1,0 +1,9 @@
+#!/bin/bash
+pid=$$
+for file in *
+do
+	if [ -f "$file" ];then
+		mv "$file" "$file.$pid"
+		echo "$file renamed to $file.$pid"
+	fi
+done
